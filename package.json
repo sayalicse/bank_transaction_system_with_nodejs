@@ -1,0 +1,28 @@
+{
+  "name": "bank_transaction_system_with_nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayalicse/bank_transaction_system_with_nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sayalicse/bank_transaction_system_with_nodejs/issues"
+  },
+  "homepage": "https://github.com/sayalicse/bank_transaction_system_with_nodejs#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.2"
+  }
+}
