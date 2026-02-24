@@ -21,17 +21,24 @@ const userSchema=new mongoose.Schema({
         required:[true,"Password is required for registration"],
         minLength:[6,"Password must be at least 6 characters long"],
         select:false
-    },
-    timestamps:true
-});
-userSchema.pre('save',async function(next){
+    }
+},
+    {
+         timestamps:true
+    }
+    
+      
+    
+    
+);
+userSchema.pre('save',async function(){
 
     if(!this.isModified('password')){
-        return next();
+        return;
     }
     const hash=await bcrypt.hash(this.password,10)
     this.password=hash;
-    return next();//password convert in hash and save in database
+    return;//password convert in hash and save in database
 })
 userSchema.methods.comparePassword=async function(password){
     return await bcrypt.compare(password,this.password);
